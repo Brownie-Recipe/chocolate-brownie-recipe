@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wambule Rai: Ancestral Modernism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#c1ebdf",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4f453f",
+                        "surface-bright": "#f4faff",
+                        "outline-variant": "#d2c4bc",
+                        "secondary": "#3f665c",
+                        "background": "#f4faff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "surface-variant": "#d5e5ef",
+                        "on-tertiary-fixed": "#261900",
+                        "tertiary-container": "#3e2c00",
+                        "on-background": "#0e1d25",
+                        "surface": "#f4faff",
+                        "on-primary-container": "#ac9181",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#bee8dc",
+                        "tertiary-fixed-dim": "#f6be3b",
+                        "surface-container-high": "#daebf5",
+                        "surface-container-highest": "#d5e5ef",
+                        "primary-fixed-dim": "#dec1af",
+                        "inverse-surface": "#23323a",
+                        "on-secondary-fixed-variant": "#274e45",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#705a4c",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#e7f6ff",
+                        "on-secondary-container": "#436a60",
+                        "tertiary": "#241800",
+                        "on-primary-fixed": "#28180d",
+                        "primary-fixed": "#fbddca",
+                        "primary-container": "#3d2b1f",
+                        "inverse-on-surface": "#e3f3fd",
+                        "surface-container": "#e0f0fb",
+                        "on-surface": "#0e1d25",
+                        "primary": "#26170c",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#a6cfc3",
+                        "inverse-primary": "#dec1af",
+                        "surface-dim": "#ccdce7",
+                        "on-tertiary-container": "#c08f00",
+                        "outline": "#81756e",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdea0",
+                        "on-secondary-fixed": "#00201a",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#574335"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Playfair Display"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .parallax-bg {
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+        .parchment-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            background-repeat: repeat;
+        }
+        .river-gradient {
+            background: linear-gradient(180deg, transparent 0%, rgba(193, 235, 223, 0.4) 50%, transparent 100%);
+        }
+        .mask-fade {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md text-primary font-headline-sm font-bold docked full-width top-0 sticky z-50 border-b border-outline/10 h-20 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
+<span class="font-headline-md text-headline-md font-bold text-primary">Wambule Rai</span>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md" href="#origins">Origins</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#culture">Culture</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#spiritual">Spiritual</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#clans">Clans</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:opacity-90 transition-opacity">
+                Heritage Archive
+            </button>
+</div>
+</nav>
+<!-- SideNavBar (Progress Indicator) -->
+<aside class="hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col p-base gap-gutter bg-surface-container/80 backdrop-blur-md rounded-2xl shadow-sm z-40 w-64 border border-outline/10">
+<div class="px-4 py-6 border-b border-outline/10 mb-2">
+<h3 class="font-headline-sm text-primary">Wambule Saga</h3>
+<p class="text-label-sm text-on-surface-variant">Kirat Heritage</p>
+</div>
+<nav class="flex flex-col gap-2 p-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-transform active:scale-95 bg-primary-container text-on-primary-container font-bold" href="#origins">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-label-md">Ancestry</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all hover:bg-surface-variant" href="#geography">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-md">Geography</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#spirituality">
+<span class="material-symbols-outlined">psychology_alt</span>
+<span class="font-label-md">Spirituality</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#rituals">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md">Rituals</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-xl transition-all" href="#modernity">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-label-md">Modernity</span>
+</a>
+</nav>
+<div class="p-4 mt-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-md hover:scale-[1.02] active:scale-95 transition-transform">
+                Join Community
+            </button>
+</div>
+</aside>
+<main>
+<!-- Hero Section: Wamdyal -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-primary overflow-hidden" id="origins"><div class="absolute inset-0 z-0"><img alt="Himalayan mid-hills at dawn" class="w-full h-full object-cover bg-center" src="https://lh3.googleusercontent.com/aida/AP1WRLs6ry71xX5Vp_P-U-_5BQ0ObmFpVYDeZLixE0QsXXovSBxIaUjhY9y3oOcBOmUZ7t89mNp_SvAGe1FACe4u4v_LM46g7f_OQc2YYCWXCgq3U8DeSxX2NAFUeIUP_vNtCK6bHoLGsDL1fXZh1qPwaJ0i1IvxzEH5sml4y07uLeAR-zxyPsQmdlbnVWlHSQdL6h-R9JPlnX3jHHb7IiIXPCuDMZO5iKy-bIk3pJQPEp9ormcVwGDBuGKbYMsm"/><div class="absolute inset-0 bg-black/40 bg-gradient-to-t from-primary/60 via-transparent to-black/20"></div></div><div class="relative z-10 text-center px-margin-mobile"><span class="text-tertiary-fixed font-label-md tracking-[0.3em] block mb-4 uppercase">The Sacred Confluence</span><h1 class="font-headline-xl text-headline-xl text-on-primary mb-6 max-w-4xl mx-auto">The Wambule Rai: Ancestral Modernism</h1><p class="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto leading-relaxed">Between the white waters of Dudh Koshi and the golden flows of Sun Koshi, a culture forged in the mist of the mid-hills endures. A legacy of spirit, stone, and ancient song.</p><div class="mt-12 flex justify-center"><span class="material-symbols-outlined text-on-primary animate-bounce text-4xl">keyboard_double_arrow_down</span></div></div></section>
+<!-- Ethno-Linguistic Identity -->
+<section class="py-24 parchment-texture bg-[#F9F7F2] relative border-b border-outline/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1"><h2 class="font-headline-lg text-headline-lg text-primary mb-8">Origins of the Name</h2><div class="flex flex-wrap gap-2 mb-8 border-b border-outline/10 pb-4"><button class="theory-tab px-4 py-2 rounded-full text-label-md transition-all bg-primary text-on-primary" onclick="document.querySelectorAll('.theory-content').forEach(el =&gt; el.classList.add('hidden')); document.getElementById('theory-bear').classList.remove('hidden'); document.querySelectorAll('.theory-tab').forEach(el =&gt; el.classList.remove('bg-primary', 'text-on-primary')); event.target.classList.add('bg-primary', 'text-on-primary');">The 'Bear' Etymology</button><button class="theory-tab px-4 py-2 rounded-full text-label-md text-on-surface-variant hover:bg-surface-variant/50 transition-all" onclick="document.querySelectorAll('.theory-content').forEach(el =&gt; el.classList.add('hidden')); document.getElementById('theory-linguistic').classList.remove('hidden'); document.querySelectorAll('.theory-tab').forEach(el =&gt; el.classList.remove('bg-primary', 'text-on-primary')); event.target.classList.add('bg-primary', 'text-on-primary');">Linguistic Theory</button><button class="theory-tab px-4 py-2 rounded-full text-label-md text-on-surface-variant hover:bg-surface-variant/50 transition-all" onclick="document.querySelectorAll('.theory-content').forEach(el =&gt; el.classList.add('hidden')); document.getElementById('theory-royal').classList.remove('hidden'); document.querySelectorAll('.theory-tab').forEach(el =&gt; el.classList.remove('bg-primary', 'text-on-primary')); event.target.classList.add('bg-primary', 'text-on-primary');">Royal Theory</button></div><div class="theory-content space-y-6" id="theory-bear"><p class="font-body-lg text-body-lg text-on-surface-variant leading-loose">The name <span class="font-bold text-primary">'Wambule'</span> finds its roots in the ancient Kirati dialects—a composite of <span class="italic">'Wam'</span> (Bear) and <span class="italic">'Dyal'</span> (Village). It tells a story of survival and coexistence in the high-altitude forests where the black bear was both a physical neighbor and a spiritual ancestor.</p><div class="flex items-center gap-4 p-6 bg-surface-container rounded-xl border-l-4 border-tertiary-fixed"><span class="material-symbols-outlined text-secondary text-3xl">language</span><p class="font-label-md italic">"In the language of the ancestors, every mountain has a name, and every name has a soul."</p></div></div><div class="theory-content space-y-6 hidden" id="theory-linguistic"><p class="font-body-lg text-body-lg text-on-surface-variant leading-loose">Some scholars propose a purely descriptive origin, suggesting the name is derived from <span class="font-bold text-primary">'Vanbu'</span>. When combined with the common Nepali suffix <span class="italic">'-le'</span>, it denotes the people belonging to that specific region or lineage, focusing on geographical identification over mythic roots.</p></div><div class="theory-content space-y-6 hidden" id="theory-royal"><p class="font-body-lg text-body-lg text-on-surface-variant leading-loose">The Royal Theory traces the name to a legendary Kirat king named <span class="font-bold text-primary">'Vaizbu'</span>. In this historical interpretation, <span class="italic">'Wamdyal'</span> translates directly to the <span class="italic">'Village of Vaizbu'</span>, suggesting the community was founded as a royal seat or a protected settlement under his reign.</p></div></div>
+<div class="order-1 md:order-2 flex justify-center">
+<div class="w-full aspect-square max-w-md bg-white p-8 rounded-full shadow-lg border border-outline/10 flex items-center justify-center relative">
+<div class="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-[spin_60s_linear_infinite]"></div>
+<span class="font-headline-xl text-primary opacity-20 absolute select-none">WAM</span>
+<div class="w-64 h-64 rounded-full overflow-hidden relative z-10 border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A minimalist, fine-line ink drawing of a powerful Himalayan Black Bear silhouette, integrated with traditional Kirat geometric patterns. The style is like a museum archive illustration on aged parchment. The background is subtle bone-white with faint pencil-drawn topographical lines of the Himalayas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy0clf5oDJjGPZzj7DcICTzrLIgx9Ob2_2igGCItF-R4rB7wdEJWF_ptSTIYW5XItvlxltDZte7t73n5-I62uZkIygpIDWqiVsJpmQ4QDjdcK3b117WbcWDiE49nebsBGA4H769fabo_t7ttOuheQd8RhZSlUNmBxPIQQlZO-ziL4XyFfJb8E3kMkbIDZfRInlKy8v-_CmOf6mU6cgGoboxtZ90FzJtsp3XY3Zy7b1kzvvn4HLJoFBw8_KBMG3eXFm9kSih7FxHorH"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sacred Confluence: Geography -->
+<section class="py-32 bg-background overflow-hidden relative" id="geography">
+<div class="absolute inset-0 river-gradient opacity-30 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Sacred Confluence</h2>
+<p class="font-body-lg text-on-surface-variant max-w-3xl mx-auto">Bounded by the white waters of Dudh Koshi and the golden flows of Sun Koshi.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+<div class="p-8 bg-surface-container-low rounded-2xl border border-outline/10 hover:shadow-md transition-all">
+<span class="text-secondary font-bold text-headline-sm block mb-4">Dudh Koshi</span>
+<p class="text-body-md text-on-surface-variant">The Milky River, representing purity and the celestial connection of the Kirat people.</p>
+</div>
+<div class="lg:col-span-1 flex justify-center relative h-96">
+<!-- Simulated Parallax Map -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-3 hover:rotate-0 transition-transform duration-500">
+<div class="w-full h-full bg-cover" data-alt="An artistic topographical map of the Khotang and Okhaldhunga regions of Nepal. The map features two major rivers—the Dudh Koshi and Sun Koshi—rendered in a shimmering metallic blue and gold against a muted, olive-green landscape. The terrain is deeply textured with mountain ridges and valleys in a high-fidelity cartographic style." data-location="Khotang, Nepal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAl_1wNd5-SXkN6y1lTApAHLv_vS-cVNyLH_SV9LCGsBFWvgFLPdZnilvCOpA5YraxcQo-WLAf6d_fHBQDtI3EnpfAhcvBZpHSp1LgrZABjNWL-kUNZ4-7v83WYT9tiZjNUR1_UvaSeTiQNqAhKUX_h7NWRAunoyd_QS4XzRZ0D99ImMHFREXBl13CbRF0RaiFmdGHaMb8bXHFKVmEsxWcJe4QDaYMhF2smk-HSumwZxZeCVXkJPv35R51Cldv0XjITV3tyR9qo9ruu");'></div>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-2xl border border-outline/10 hover:shadow-md transition-all">
+<span class="text-tertiary font-bold text-headline-sm block mb-4">Sun Koshi</span>
+<p class="text-body-md text-on-surface-variant">The Gold River, a source of life and the geographical anchor of Wambule territory.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The 34 Clans -->
+<section class="py-24 bg-surface-container-lowest" id="clans">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div><span class="text-label-md text-secondary tracking-[0.2em] uppercase block mb-4">Lineage &amp; Structure</span><h2 class="font-headline-lg text-headline-lg text-primary mb-2">The 34 Pillars</h2><p class="text-body-lg text-on-surface-variant max-w-md">A complex lineage system defining social and ritual hierarchy within the Wambule community.</p></div>
+<div class="flex bg-surface-container-high p-1.5 rounded-full border border-outline/10 shadow-sm"><button class="px-8 py-2.5 rounded-full bg-primary text-on-primary font-label-md shadow-md transition-all">Male Nomenclature</button><button class="px-8 py-2.5 rounded-full text-on-surface-variant font-label-md hover:bg-surface-variant/50 transition-all">Female Nomenclature</button></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-gutter"><div class="col-span-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">01</p>
+<p class="font-headline-sm text-primary text-lg">m. Birwancha</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Birwanme / Birwancheni</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">02</p>
+<p class="font-headline-sm text-primary text-lg">m. Boqwam</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Boqwamme</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">03</p>
+<p class="font-headline-sm text-primary text-lg">m. Bhau-Chacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Bhau-Cacwame / Bhaume</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">04</p>
+<p class="font-headline-sm text-primary text-lg">m. Dwankhumcho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Dwankhumme / Dwankhumcheni</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">05</p>
+<p class="font-headline-sm text-primary text-lg">m. Dwarwancha</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Dwarwanme / Dwarwncheni</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">06</p>
+<p class="font-headline-sm text-primary text-lg">m. Grturathoke</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Grturathokeme</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">07</p>
+<p class="font-headline-sm text-primary text-lg">m. Gurba / Gurbha</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Gurbame / Gurbhame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">08</p>
+<p class="font-headline-sm text-primary text-lg">m. Jero</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Jerome</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">09</p>
+<p class="font-headline-sm text-primary text-lg">m. Kyampacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Kyampame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">10</p>
+<p class="font-headline-sm text-primary text-lg">m. Laimcho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Laimme / Laimceni</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">11</p>
+<p class="font-headline-sm text-primary text-lg">m. Mukkacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Mukkame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">12</p>
+<p class="font-headline-sm text-primary text-lg">m. Nakso-Chacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Nakso-Cacwame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">13</p>
+<p class="font-headline-sm text-primary text-lg">m. Phumlacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Phumlacheni / Phumlame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">14</p>
+<p class="font-headline-sm text-primary text-lg">m. Rabdhacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Rabdhaceni / Rabdhame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">15</p>
+<p class="font-headline-sm text-primary text-lg">m. Rabracho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Rabrame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">16</p>
+<p class="font-headline-sm text-primary text-lg">m. Rabhancho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Rabhanme / Rabhancheni</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">17</p>
+<p class="font-headline-sm text-primary text-lg">m. Rwake</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Rwakeme</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">18</p>
+<p class="font-headline-sm text-primary text-lg">m. SumdiChaco</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Sumdi-Cacwame / Sumdime</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">19</p>
+<p class="font-headline-sm text-primary text-lg">m. Twarbe</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Twarbeni</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">20</p>
+<p class="font-headline-sm text-primary text-lg">m. Bagale</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">21</p>
+<p class="font-headline-sm text-primary text-lg">m. Binjarav</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">22</p>
+<p class="font-headline-sm text-primary text-lg">m. Brankhelcho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Brainkhelme</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">23</p>
+<p class="font-headline-sm text-primary text-lg">m. Budarai</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">24</p>
+<p class="font-headline-sm text-primary text-lg">m. Hatacho</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">25</p>
+<p class="font-headline-sm text-primary text-lg">m. Jimbuwal</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">26</p>
+<p class="font-headline-sm text-primary text-lg">m. Jubule</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">27</p>
+<p class="font-headline-sm text-primary text-lg">m. Lolpe</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">28</p>
+<p class="font-headline-sm text-primary text-lg">m. Luwari</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">29</p>
+<p class="font-headline-sm text-primary text-lg">m. Mukhethoke</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">30</p>
+<p class="font-headline-sm text-primary text-lg">m. Ribuwali</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">31</p>
+<p class="font-headline-sm text-primary text-lg">m. Sankhelcho</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">32</p>
+<p class="font-headline-sm text-primary text-lg">m. Sekilcho</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">33</p>
+<p class="font-headline-sm text-primary text-lg">m. Tilpiacho</p>
+<p class="text-body-md text-on-surface-variant text-sm">f. Tilpame</p>
+</div>
+<div class="p-4 border border-outline/10 bg-white hover:border-secondary transition-all rounded-xl">
+<p class="text-label-sm text-secondary font-bold mb-1">34</p>
+<p class="font-headline-sm text-primary text-lg">m. Topile</p>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Jagrat: The Ancestral Eye -->
+<section class="py-32 bg-surface-dim text-on-surface overflow-hidden relative" id="spirituality"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"><div class="relative h-[600px] order-2 lg:order-1"><img alt="A high-fidelity, cinematic photograph of a Kirat Rai shaman (Jwamco) performing a ritual by a sacred fire at dusk." class="w-full h-full object-cover rounded-3xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3HYtzGl45W3wPKJSQjhTU7_-L8LiTvoXCvgaZeKlRR9ByulZ6c5rJ06_b4Ek3-S9Wef99pH1YobrDCcS76V-iRjKjTK9Q6i4THjVXKrXc31asi1h8sem5zV28OP1rZtCSxkA0dGAB41DbLCylWjK3ztuUGh_xNucTuPtmHrdkQqpj97UKs9kM73E-Q9jvXmTh6qDqvJEFALUaPf-YExubkoPA5-hpc6jV_U1d6hjAdzKKbio8nrSPh1vqfF4gc-gqLZyZvXZf04I7"/><div class="absolute inset-0 rounded-3xl border border-primary/10 ring-8 ring-black/5"></div></div><div class="order-1 lg:order-2"><h2 class="font-headline-xl text-headline-xl text-primary mb-8">Jagrat: The Ancestral Eye</h2><p class="font-body-lg text-body-lg mb-10 leading-relaxed text-on-surface-variant">The primary religious group is the <span class="font-bold text-primary">Jagrat</span>, known as <span class="italic">'Sama pwaco'</span>—those who obey the deities and spirits. Their faith bridges the human world with the <span class="font-bold">Sama</span> (ancestral spirits) while maintaining protection against the <span class="italic">Hivaco Pudme</span> (malevolent spirits) of the high ridges.</p><div class="space-y-8"><div class="flex gap-4 items-start"><span class="material-symbols-outlined text-secondary text-3xl">visibility</span><div><h4 class="font-bold text-body-lg text-primary mb-2">Libju (Gorujure Dada)</h4><p class="text-on-surface-variant">Grandfather Libju, the male primordial ancestor. Represented by the 1957-meter Libju Hill (Gorujure Dada) north of the Dudh Koshi, he is the benevolent protector offering spiritual strength to all clans.</p></div></div><div class="flex gap-4 items-start"><span class="material-symbols-outlined text-secondary text-3xl">grass</span><div><h4 class="font-bold text-body-lg text-primary mb-2">Bhumju</h4><p class="text-on-surface-variant">The female primordial ancestor, represented by the 1400-meter Bhumju Hill south of the Dudh Koshi. Her spiritual presence is anchored near Damli village, overseeing the fertility of the land.</p></div></div></div></div></div></section>
+<!-- Ritual Hierarchy -->
+<section class="py-24 bg-surface-bright" id="rituals">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Guardians of the Sacred</h2>
+<p class="text-body-lg text-on-surface-variant">The ecclesiastical structure of the Wambule community.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="bg-white p-10 rounded-2xl border border-outline/10 flex flex-col items-center text-center hover:-translate-y-2 transition-all shadow-sm"><div class="w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-on-secondary-container text-4xl">ecg_heart</span></div><h3 class="font-headline-sm text-primary mb-2">Jwamco</h3><p class="text-label-md text-secondary font-bold mb-4">The Shaman</p><p class="text-body-md text-on-surface-variant">The primary spiritual bridge who communicates with the Sama through trance and rhythmic drumming.</p></div><div class="bg-white p-10 rounded-2xl border-2 border-primary/10 flex flex-col items-center text-center hover:-translate-y-2 transition-all shadow-md relative overflow-hidden"><div class="absolute top-0 left-0 w-full h-1 bg-primary"></div><div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-on-primary-container text-4xl">temple_hindu</span></div><h3 class="font-headline-sm text-primary mb-2">Nakso</h3><p class="text-label-md text-primary font-bold mb-4">The Family Priest</p><p class="text-body-md text-on-surface-variant">Custodian of genealogy. Distinguished by a white dress, rudraksha necklace, and the sacred dhyangro drum during rituals.</p></div><div class="bg-white p-10 rounded-2xl border border-outline/10 flex flex-col items-center text-center hover:-translate-y-2 transition-all shadow-sm"><div class="w-20 h-20 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6"><span class="material-symbols-outlined text-on-tertiary-fixed text-4xl">local_library</span></div><h3 class="font-headline-sm text-primary mb-2">Labuco</h3><p class="text-label-md text-tertiary-fixed-variant font-bold mb-4">The Assistant Priest</p><p class="text-body-md text-on-surface-variant">The 'Assistant' who supports the Nakso and Jwamco, ensuring the precise execution of complex ancestral ceremonies.</p></div></div>
+</div>
+</section>
+<!-- The Sacred Harvest & Passage -->
+<section class="py-24 bg-surface-container-high relative overflow-hidden"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"><div class="text-center mb-16"><h2 class="font-headline-lg text-headline-lg text-primary mb-4">Sacred Rhythms: Festivals &amp; Rituals</h2><p class="text-body-lg text-on-surface-variant">The seasonal and spiritual cycles that define Wambule life.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-outline/5 flex flex-col"><div class="h-48 overflow-hidden"><img alt="Shaman performing ritual" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvdT0N355sHt8XjRgP9uWGV8MaEEMiEc5TPSY4ZlKJ_CW_QOwZKOxcfEDN1EcoghzAbB21bxrDKNw7ceCc2LuwPu--UzcPVGpRVQJ3A2_hFkl2MfqUr-blEkGWun4XuUGFV-k-G4M3NiHcgYNgrB-rhRYVYdXuec4LRQ-sI9L4Q2QNWZcPimrqxF52pcd_fYj0cBC24TNVh6tkc2zXXpzxxeeDH4BoKD8dS038FR8rNVhfXRA52F7TRvRZB"/></div><div class="p-6 flex-grow"><h3 class="font-headline-sm text-primary mb-2">Nwaŋgi</h3><p class="text-label-sm text-secondary uppercase tracking-wider mb-3">Annual Harvest Festival</p><p class="text-body-md text-on-surface-variant text-sm">The offering of new crops to ancestors before human consumption, a ritual of deep gratitude for the land's bounty.</p></div></div><div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-outline/5 flex flex-col"><div class="h-48 overflow-hidden"><img alt="Ancestral ritual" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvYHZrcmz8jx_2STh5NNjCFk4AgfXSvKA5TY3XdApm-Z5LSn4hlXf9Aec9Gzfq-bGhj89pLkpM2me5iE0IiyLze046IAccG8mSqqxbtGvqlulrsXqP7rdecQLLjWD2UBU2VpjdDQTo2EDMzfJsJBNZZfizbf43as3OdbfFZecmvFyQqLNAzgVBlDQIo3vAQLZAYGS3SRRDlSMnbVhP9DIutz0TjtxfOC_mN0bfVl7VaCdb44g6r5k0d2XDkuG13XY1J2JFgKD6IvxF"/></div><div class="p-6 flex-grow"><h3 class="font-headline-sm text-primary mb-2">Khaumo</h3><p class="text-label-sm text-primary uppercase tracking-wider mb-3">Ancestral &amp; Funeral Rituals</p><p class="text-body-md text-on-surface-variant text-sm">A spiritual journey ensuring that the souls of the departed reach the ancestral realm through intricate chanting and prayer.</p></div></div><div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-outline/5 flex flex-col"><div class="h-48 bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary/20 text-6xl">nature_people</span></div><div class="p-6 flex-grow"><h3 class="font-headline-sm text-primary mb-2">Bhume Puja</h3><p class="text-label-sm text-secondary uppercase tracking-wider mb-3">Worship of the Earth</p><p class="text-body-md text-on-surface-variant text-sm">A 9-day collective nature festival honoring the earth spirits, marking the beginning of the sowing season.</p></div></div><div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-outline/5 flex flex-col"><div class="h-48 bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary/20 text-6xl">temple_buddhist</span></div><div class="p-6 flex-grow"><h3 class="font-headline-sm text-primary mb-2">Sesa Ceremony</h3><p class="text-label-sm text-primary uppercase tracking-wider mb-3">Ancestor Feeding</p><p class="text-body-md text-on-surface-variant text-sm">A mandatory ritual conducted at the ancestral shrine to feed and honor the spirits of family members.</p></div></div></div></div></section>
+<!-- The Reformed Sects -->
+<section class="py-32 bg-white relative" id="modernity">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="font-label-md text-primary-fixed-variant tracking-widest uppercase mb-4 block">Evolving Identity</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">The Reformed Sects</h2>
+<div class="space-y-8">
+<div class="p-8 bg-surface-container rounded-2xl border-l-4 border-tertiary-fixed-dim">
+<h4 class="font-headline-sm text-primary mb-2">Santau-Bhes</h4>
+<p class="text-body-md text-on-surface-variant">A movement bridging the gap between Kirati shamanism and Hindu philosophy, emphasizing moral conduct and organized temple worship.</p>
+</div>
+<div class="p-8 bg-surface-container rounded-2xl border-l-4 border-secondary">
+<h4 class="font-headline-sm text-primary mb-2">Hwam</h4>
+<p class="text-body-md text-on-surface-variant">A syncretic evolution focusing on internal purification and communal harmony, adapting ancestral traditions for the modern Kirat identity.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container-highest rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] animate-[blob_15s_infinite_alternate] overflow-hidden">
+<img class="w-full h-full object-cover opacity-90" data-alt="A contemporary Wambule cultural center designed with modern architectural lines but incorporating traditional stone-masonry and Kirati motifs. Large glass windows reflect the surrounding green mountains. Inside, young people are interacting with digital touchscreens displaying their genealogy. Bright, clean, optimistic light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRmrqqt5kq5K7XBJHRX64Uyz0vm60dE8hDbZXtD0yr2Z3seWlIAuRaOQVU0vsqIgS0LNOjEipE2s02tg1xeIjVH_5y858OdFGrLFUme2KWKNPsJYkL0vkj9kG8DseCSmUnI-qh--8Ei89ST0u0tVWX3ybM98lvlsB4JjNCtu3QrsiuCxB4_N0-kqkMSgjrJDgxk6xMAJWhdUqEgAM_iyXxcsx-2k_Rz2MJ1VBZuujYKGGFnMW26FNx5dg2E025MzKwc9HfeZY8m2zQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary font-body-md w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-container-max mx-auto">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-primary block mb-4">Wambule Rai</span>
+<p class="text-on-primary/70 max-w-sm mb-8">© 2024 Kirat Wambule Rai Community. Preserving Ancestral Modernism.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-on-primary/50 text-label-sm uppercase tracking-widest">Resources</h5>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-tertiary-fixed underline-offset-4 transition-all duration-200" href="#">Archives</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-tertiary-fixed underline-offset-4 transition-all duration-200" href="#">Clan Registry</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-tertiary-fixed underline-offset-4 transition-all duration-200" href="#">Language Lab</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-on-primary/50 text-label-sm uppercase tracking-widest">Contact</h5>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-tertiary-fixed underline-offset-4 transition-all duration-200" href="#">Heritage Board</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-tertiary-fixed underline-offset-4 transition-all duration-200" href="#">Submit Archive</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-tertiary-fixed underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Parallax Effect for Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax-bg');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
+            }
+
+            // Simple active state for side nav
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('aside nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+
+        // Micro-interaction for clan cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+<style>
+        @keyframes blob {
+            0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            100% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%; }
+        }
+    </style>
+</body></html>
